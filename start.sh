@@ -39,6 +39,6 @@ fi
 #start worker and connect it to the master
 export GST_PLUGIN_PATH=/data/xfding/asr/gst-kaldi-nnet2-online/src/:/home/xfding/kaldi/src/gst-plugin/
 
-for i in {1..10}; do
+for i in {1..5}; do
 	python2 ./kaldigstserver/worker.py -c $YAML -u ws://$MASTER:$PORT/worker/ws/speech 2>> ../log/worker$i.log &
 done
